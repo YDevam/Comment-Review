@@ -10,7 +10,7 @@ const Validation = () => {
     return (
         <>
             <form method="post" onSubmit={handleSubmit(signup)} className="gar col-lg-6 mx-auto my-5 p-5 shadow">
-                <h1 className="text-center text-warning">Form Registration</h1>
+                <h1 className="text-center text-warning">Comment-Review</h1>
                 <div className="mt-4">
                     <input type="text" className="form-control" placeholder="Enter UserName" {...register('username', {
                         required: {
