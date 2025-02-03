@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 
 const Validation = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const [submittedData, setSubmittedData] = useState(null);
+    const [Data, setData] = useState(null);
     function signup(data) {
-        setSubmittedData(data);
+        setData(data);
         console.log(data);
         alert("Thank You for registration");
         reset()
@@ -161,16 +161,16 @@ const Validation = () => {
                 </div>
             </form>
 
-            {submittedData && (
+            {Data && (
                 <div className="gar col-lg-8 mx-auto my-5 p-5 shadow ">
                     <h2 className="text-center text-warning ">Your Data</h2>
-                    <p><strong>Username:</strong> {submittedData.username}</p>
-                    <p><strong>Email:</strong> {submittedData.email}</p>
-                    <p><strong>Password:</strong> {submittedData.password}</p>
-                    <p><strong>Gender:</strong> {submittedData.gender}</p>
-                    <p><strong>Course:</strong> {submittedData.course}</p>
-                    <p><strong>Hobbies:</strong> {submittedData.hobbies?.join(", ") || "None"}</p>
-                    <p><strong>Message:</strong> {submittedData.message}</p>
+                    <p><strong>Username:</strong> {Data.username}</p>
+                    <p><strong>Email:</strong> {Data.email}</p>
+                    <p><strong>Password:</strong> {Data.password}</p>
+                    <p><strong>Gender:</strong> {Data.gender}</p>
+                    <p><strong>Course:</strong> {Data.course}</p>
+                    <p><strong>Message:</strong> {Data.message}</p>
+                    <p><strong>Hobbies:</strong> {Data.hobbies?.join(", ") || "None"}</p>
                 </div>
             )}
 
